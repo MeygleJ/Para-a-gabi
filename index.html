@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para o Amor da Minha Vida</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff0f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      color: #d63384;
+      margin: 0 20px 30px;
+    }
+
+    p.declaracao {
+      font-size: 1em;
+      color: #8a2be2;
+      max-width: 600px;
+      margin: 20px;
+      line-height: 1.6;
+    }
+
+    button {
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 1;
+    }
+
+    button:hover {
+      background-color: #ad2e6e;
+    }
+
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff6b81;
+      font-size: 24px;
+      animation: float 6s infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>💖You are the right one and I'm just the girl who's lookin' at you💖</h1>
+  <p class="declaracao">
+   Meu Amor,
+Saiba que desde que eu conheci você, eu soube que seria você a pessoa que transformaria tudo na minha vida. Não acredito em coincidências, eu sei que tudo que aconteceu até hoje foi pra gente chegar até aqui e assim a história vai se escrevendo até chegarmos aos 90 anos, de cabelinhos brancos, pele enrugada, peitinhos caídos mas com um amor de uma vida inteira (e de muitos aprendizados).
+É um prazer dividir minha vida com você, amo dormir e acordar ao seu lado, amo suas manias esquisitas, amo te ouvir contar sobre suas ideias mirabolantes, seus devaneios, suas alegrias e tristezas, suas conquistas e me sinto muito mais feliz que é recíproco.
+Amo te observar, te olhar de pertinho, ver seus detalhes, posso dizer com toda a propriedade que conheço você como a palma da minha mão e cada detalhe seu meu amor, é a maior perfeição da minha vida meu amor, você é tão linda, é linda por fora e é linda por dentro.
+Você se tornou o meu pensamento favorito, a calma nos meus dias difíceis, a razão de tantos sorrisos bobos. Com você, tudo ganha mais cor, mais sentido. É como se, de repente, o mundo tivesse parado só para nos ver acontecer.Eu amo o jeito como você me faz sentir em paz, mesmo no caos. Amo a sua risada, suas manias, seus silêncios e suas palavras. Amo o que somos juntas: parceria, carinho, respeito e verdade.
+Com todo o meu amor,
+Moy 💖
+  </p>  
+  <button onclick="window.location.href='meubem.jpg'">You and me, Always forever</button>
+
+  <div class="hearts" id="hearts"></div>
+
+  <script>
+    const heartsContainer = document.getElementById('hearts');
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '❤';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
